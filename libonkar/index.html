@@ -164,9 +164,70 @@
               <div class="tile is-parent">
                  <article class="tile is-child">
                   <!-- Если что, прописать <article class="tile is-child box"> вместо того, что выше-->
-                  <figure class="image">
+                  <!-- <figure class="image">
                     <img src="../pics/03.jpg" alt="Библиотека на Карповке" />
-                  </figure>
+                  </figure> -->
+                  <div id="slideshow-container">
+                    <div class="mySlides">
+                      <img class="slide-img" src="pics/01.jpg" alt="Slide 1">
+                    </div>
+                    <div class="mySlides">
+                      <img class="slide-img" src="pics/02.jpg" alt="Slide 2">
+                    </div>
+                    <div class="mySlides">
+                      <img class="slide-img" src="pics/02.jpg" alt="Slide 2">
+                    </div>
+                    <div class="mySlides">
+                      <img class="slide-img" src="pics/03.jpg" alt="Slide 2">
+                    </div>
+                    <div class="mySlides">
+                      <img class="slide-img" src="pics/04.jpg" alt="Slide 2">
+                    </div>
+                    <div class="mySlides">
+                      <img class="slide-img" src="pics/05.jpg" alt="Slide 2">
+                    </div>
+                    <div class="mySlides">
+                      <img class="slide-img" src="pics/07.jpg" alt="Slide 2">
+                    </div>
+                    <div class="mySlides">
+                      <img class="slide-img" src="pics/08.jpg" alt="Slide 2">
+                    </div>
+                    <div class="mySlides">
+                      <img class="slide-img" src="pics/09.jpg" alt="Slide 2">
+                    </div>
+                    <!-- Добавьте дополнительные слайды по аналогии, если необходимо -->
+                  
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  
+                  <script>
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+
+                    function showSlides(n) {
+                      var i;
+                      var slides = document.getElementsByClassName("mySlides");
+
+                      if (n > slides.length) {
+                        slideIndex = 1;
+                      }
+
+                      if (n < 1) {
+                        slideIndex = slides.length;
+                      }
+
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                      }
+
+                      slides[slideIndex - 1].style.display = "block";
+                    }
+                  </script>
                 </article>
               </div>
               <div class="tile is-parent">
