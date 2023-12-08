@@ -1,0 +1,48 @@
+span.social-logo {
+    vertical-align: sub;
+}
+
+.vk-link {
+    fill: #0077ff;
+}
+
+.tgram-link {
+    fill: #54a9eb;
+}
+
+/* .is-child{
+box-shadow: none;
+} */
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.accordion-header {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+
+}
+
+.accordion-content {
+    max-width: 600px;
+    margin: auto;
+    overflow-y: auto; /* Разрешить прокрутку внутри контейнера */
+    max-height: 800px; /* Задать максимальную высоту контейнера */
+    border-radius: 5px;
+}

@@ -1,0 +1,112 @@
+<!-- crb -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Стили для аккордеона */
+        .accordion-container {
+            width: 300px;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-header {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+    <title>Сворачиваемый контейнер</title>
+</head>
+
+<body>
+
+    <div class="accordion-container">
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                Заголовок разворачиваемого блока 1
+            </div>
+            <div class="accordion-content">
+                <p>Содержимое разворачиваемого блока 1...</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                Заголовок разворачиваемого блока 2
+            </div>
+            <div class="accordion-content">
+                <p>Содержимое разворачиваемого блока 2...</p>
+            </div>
+        </div>
+
+        <!-- Добавьте дополнительные блоки по аналогии, если необходимо -->
+    </div>
+
+    <div class="card">
+        <div class="card-header" id="headingHistory">
+            <h2 class="mb-0"><button aria-controls="history" aria-expanded="false"
+                    class="btn btn-lg btn-link btn-block text-left collapsed" data-target="#history" data-toggle="collapse"
+                    type="button">История библиотеки</button></h2>
+        </div>
+        <div aria-labelledby="headingHistory" class="collapse" data-parent="#accordion" id="history" style="">
+            <div class="card-body">
+                <p align="justify" class="lead">Библиотека на Карповке – это очередной проект модернизации библиотечного
+                    пространства на Петроградской стороне.</p>
+                <p align="justify">Библиотека, расположенная в самом сердце исторического Петербурга на берегу тихой
+                    Карповки, может стать для жителей города и Петроградского района маленьким оазисом, где можно укрыться
+                    от суеты мегаполиса и стать ближе к себе, к природе, к книгам. В новом дизайне библиотека стала одним из
+                    элементов, формирующих общественное пространство на набережной реки Карповки, основной смысл которого
+                    состоит в том, чтобы времяпровождение жителей района становилось удобным, комфортным и наполненным
+                    смыслом.</p>
+                <p align="justify">Книжный фонд насчитывает более 40 тысяч изданий и ведёт свою историю с 1957 года. В
+                    библиотеке любой желающий найдет классику и новинки художественной литературы, актуальный non-fiction,
+                    детскую литературу и книги young adult.</p>
+                <p align="justify">Также в библиотеке теперь есть:</p>
+                <ul>
+                    <li><b>Коворкинг </b>- комфортное отдельное помещение, в котором пользователи могут поработать
+                        самостоятельно или провести встречу в небольших группах (4-5 человек)</li>
+                    <li><b>Лаунж зона</b> - пространство для отдыха, где можно укрыться от суеты большого города и стать
+                        ближе к себе, к природе, к книгам</li>
+                    <li><b>Детская зона</b> - основная площадка для реализации мероприятий с детской аудиторией. Здесь
+                        представлены не только прекрасные детские книги, но и интерактивные глобусы для изучения биологии,
+                        географии, истории, модель строения Земли, астропланетарий и микроскоп, глобуса звездного неба,
+                        наборы для физических и химических экспериментов, наглядно демонстрирующих законы физики, химии и
+                        биологии</li>
+                </ul>
+                <p align="justify">Открывшись после ремонта, мы изменили часы работы библиотеки. Теперь библиотека работает
+                    ежедневно, без выходных, с 10.00 до 20.00. Это удобно всем категориям пользователей: детям и взрослым,
+                    работающим и пенсионерам.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAccordion(element) {
+            var content = element.nextElementSibling;
+
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
